@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "mmci",
+	"version": "${version}",
+	"name": "MetallicIntegration",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mmci/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.scaredsmods.metallicintegration.MetallicIntegration"
+		],
+		"fabric-datagen": [
+			"io.github.scaredsmods.metallicintegration.MetallicIntegrationDataGenerator"
+		],
+		"rei_client": [
+			"io.github.scaredsmods.metallicintegration.compat.rei.metalcombining.MetalCombinerREIClientPlugin"
+		],
+		"emi": [
+			"io.github.scaredsmods.metallicintegration.compat.emi.metalcombining.MetalCombinerEMIClientPlugin"
+		]
+	},
+	"mixins": [
+		"mmci.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+
+}
